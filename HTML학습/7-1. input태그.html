@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            margin-to: 100px;
+            width: 200px;
+            height: 200px;
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="#">
+
+        <label>
+            <input type="checkbox"> 자동 로그인
+        </label>
+        <label for="remember">
+            ID 기억하기
+        </label>
+
+        <br>
+        <input id="remember" type="checkbox"> 
+        <br>
+
+        <label>
+        # 이름 : <input type="text">
+        </label>
+
+
+        <select name="drink">
+            <optgroup label="Coffee">
+                <option value="아메리카노">Americano</option>
+                <option selected>Caffe Latte</option>
+                <option disabled>Cappuccino (Sold out)</option>            
+            </optgroup>
+
+            <optgroup label="Juice">
+                <option>Orange Juice</option>
+                <option>Lime Juice</option>
+            </optgroup>
+        </select>
+        
+        <br>
+
+        <textarea cols="10" rows="5"></textarea>
+
+        <button type="submit">전송</button>
+
+    </form>
+
+    <div class="box" title="주황색 정사각형"></div>
+
+</body>
+</html>
