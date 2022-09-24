@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 태그 1점 */ 
+        /* !important는 무한대 점수 */
+        div{
+            color: blue !important;
+        }
+        /* 아이디 100점 */
+        #c-y{
+            color: yellow;
+        }
+        /* 클래스 10점 */
+        .c-g{
+            color: green;
+        }
+        /* 태그 1점 (동일점수일 경우 늦게 쓴게 우선) */
+        div{
+            color: red;
+        }
+        /* 태그 1점 (정확한 명시가 우선) */
+        body{
+            color: aqua;
+        }
+
+        /* 1점 */
+        h1 {
+            color: lightcoral;
+        }
+        /* 10 + 1 점 */
+        .bbb h1 {
+            color: orangered;
+        }
+        /* 100 + 1 점 */
+        #aaa h1 {
+            color: gray;
+        }
+        /* 100 + 1 + 10 + 1 점 */
+        #aaa div.bbb h1 {
+            color: greenyellow;
+        }
+        /* 100 + 10 + 1 점 */
+        #aaa .bbb h1 {
+            color: tomato;
+        }
+        /* 1 + 10 + 1 점 */
+        div.bbb > h1 {
+            color: violet;
+        } 
+
+    </style>
+
+</head>
+<body>
+    <!-- 인라인 1000점 -->
+    <div id="c-y" class="c-g" style="color: orange;">안녕하세요1</div>
+    <div id="c-y" cl0ass="c-g">안녕하세요2</div>
+    <div class="c-g">안녕하세요3</div>
+    <div>안녕하세요4</div>
+    <section>안녕하세요5</section>
+
+    <hr>
+    <!-- #aaa>.bbb>h1{안녕하세요6} -->
+    <div id="aaa">
+        <div class="bbb">
+            <h1>안녕하세요6</h1>
+        </div>
+    </div>
+
+</body>
+</html>
